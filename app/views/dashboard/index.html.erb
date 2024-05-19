@@ -1,0 +1,7 @@
+<h1> Welcome to Dashbaord </h1>
+<% if can? :view, :products %>
+  <%= link_to "Products", products_path, class: "btn btn-primary" %>
+  <%= link_to "Users List", users_list_path, class: "btn btn-primary" %>
+  <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+
+<% end %>

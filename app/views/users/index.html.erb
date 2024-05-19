@@ -1,0 +1,14 @@
+<!-- app/views/users/index.html.erb -->
+<h1>Users List</h1>
+
+<ul>
+<% if @company_users %>
+  <% @company_users.each do |user| %>
+    <li><%= user.email %></li>
+    <% end %>
+    <!-- Display other user details as needed -->
+    <% else %>
+    <li>No users found</li>
+  <% end %>
+</ul>
+<%= link_to "Back to Dashboard", root_path, class: "btn btn-primary" %>
