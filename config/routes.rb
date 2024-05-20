@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   devise_scope :user do
     get 'signin', to: 'devise/sessions#new' 
     delete 'users/sign_out', to: 'devise/sessions#destroy'
-    root to: 'dashboard#index'
+    root to: 'dashboard#index"
 
     get 'users', to: 'users#index', as: 'users_list'
   end
